@@ -1,66 +1,48 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <main>
+      {/* SECTION 1: THE TRAP */}
+      <section className="hero-attack">
+        <div className="glitch-container">
+          <h1 className="glitch" data-text="CAÍSTE EN UN CIBERATAQUE">
+            CAÍSTE EN UN CIBERATAQUE
+          </h1>
+          <p className="subtext-attack">TU INFORMACIÓN HA SIDO COMPROMETIDA</p>
+        </div>
+        <div className="scroll-indicator">
+          DESLIZA PARA SABER MÁS ↓
+        </div>
+      </section>
+
+      {/* SECTION 2: THE REVEAL */}
+      <section className="hero-safe">
+        <div className="safe-card">
+          <h2>¡Mantén la calma!</h2>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Esto es solo un <strong>simulacro controlado</strong> para enseñarte cómo funcionan los ataques de phishing. 
+            En un ataque real, no siempre hay un mensaje de advertencia.
           </p>
+          
+          <div className="tips-grid">
+            <div className="tip">
+              <h3>Revisa el Remitente</h3>
+              <p>Los atacantes a menudo usan correos que parecen oficiales pero vienen de dominios extraños.</p>
+            </div>
+            <div className="tip">
+              <h3>Cuidado con los Enlaces</h3>
+              <p>Pasa el cursor sobre los enlaces antes de hacer clic para ver la dirección real.</p>
+            </div>
+            <div className="tip">
+              <h3>Usa 2FA</h3>
+              <p>La autenticación de dos factores es tu mejor defensa contra el acceso no autorizado.</p>
+            </div>
+            <div className="tip">
+              <h3>Sentido de Urgencia</h3>
+              <p>Si el mensaje te presiona para actuar rápido, probablemente sea una trampa.</p>
+            </div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
