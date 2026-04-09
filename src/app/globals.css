@@ -43,7 +43,83 @@ section {
   overflow: hidden;
 }
 
-/* --- SECTION 1: ATTACK --- */
+/* --- MICROSOFT TRAP DESIGN --- */
+.hero-trap {
+  background-color: #f2f2f2;
+  color: #1b1b1b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.trap-card {
+  background: white;
+  padding: 44px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.ms-logo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.ms-logo svg {
+  width: 108px;
+  height: 23px;
+}
+
+.trap-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.trap-header p {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #666;
+  font-size: 15px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-bottom-color: #0067b8;
+}
+
+.btn-primary {
+  background-color: #0067b8;
+  color: white;
+  padding: 10px 36px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #005da6;
+}
+
+.trap-footer {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* --- SECTION 2: ATTACK --- */
 .hero-attack {
   background: radial-gradient(circle at center, #220000 0%, #000000 100%);
   animation: bg-flicker 0.1s infinite alternate;
