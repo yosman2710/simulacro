@@ -32,15 +32,14 @@ body {
 }
 
 section {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
   position: relative;
-  overflow: hidden;
 }
 
 /* --- MICROSOFT TRAP DESIGN --- */
@@ -161,9 +160,10 @@ section {
 .hero-safe {
   background-color: var(--bg-safe);
   color: var(--text-safe);
-  padding: 2rem;
+  padding: 4rem 1rem;
   text-align: center;
   border-top: 5px solid var(--accent-safe);
+  height: auto;
 }
 
 .safe-card {
@@ -284,7 +284,28 @@ section {
 
 /* --- MOBILE OPTIMIZATIONS --- */
 @media (max-width: 768px) {
-  .glitch { font-size: 3rem; }
-  .safe-card { padding: 1.5rem; margin: 1rem; }
-  .safe-card h2 { font-size: 2rem; }
+  .glitch { font-size: 2.5rem; }
+  .subtext-attack { font-size: 1rem; padding: 0 20px; }
+  
+  .safe-card { 
+    padding: 2rem 1rem; 
+    margin: 1rem; 
+    width: 95%;
+  }
+  .safe-card h2 { font-size: 1.8rem; }
+  .safe-card p { font-size: 1rem; }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-safe {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .trap-card {
+    padding: 30px 20px;
+    margin: 10px;
+  }
 }

